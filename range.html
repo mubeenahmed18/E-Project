@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARVAN - Range of Cars</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#f4f4f4;color:#222;}
+    header,footer{background:#111;color:#fff;padding:15px 30px;}
+    header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+    .logo{font-size:28px;font-weight:bold;color:#ff3c00;}
+    nav ul{list-style:none;display:flex;gap:20px;flex-wrap:wrap;}
+    nav a{text-decoration:none;color:#fff;padding:8px 12px;}
+    nav a:hover{background:#ff3c00;border-radius:5px;}
+    .container{max-width:1100px;margin:auto;padding:40px 20px;}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+    .card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    h1,h2{margin-bottom:12px;}
+    p{line-height:1.7;color:#555;}
+    footer{text-align:center;margin-top:30px;}
+    @media(max-width:768px){header{flex-direction:column;gap:15px;}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CARVAN</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="range.html">Range of Cars</a></li>
+        <li><a href="preowned.html">PreOwned Cars</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Range of Cars</h1>
+    <p style="margin-bottom:20px;">The document specifically asks for categories like Small Car, Sedan, Van and Jeeps. :contentReference[oaicite:4]{index=4}</p>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Small Cars</h2>
+        <p>Compact, economical and ideal for daily city use. Best for students and small families.</p>
+      </div>
+      <div class="card">
+        <h2>Sedan</h2>
+        <p>Elegant design, comfortable seating and smooth performance for personal and business use.</p>
+      </div>
+      <div class="card">
+        <h2>Van</h2>
+        <p>Spacious and practical vehicles designed for larger families and transport purposes.</p>
+      </div>
+      <div class="card">
+        <h2>Jeeps / SUVs</h2>
+        <p>Strong road presence, better ground clearance and ideal for long routes and rough roads.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 CARVAN. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

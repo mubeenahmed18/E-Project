@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARVAN | Small Cars</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f3f3f3;
+      color:#222;
+    }
+
+    header{
+      background:#000;
+      padding:18px 35px;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .logo{
+      color:orangered;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    nav ul li a{
+      color:#fff;
+      text-decoration:none;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active{
+      color:orangered;
+    }
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      text-align:center;
+      padding:90px 20px;
+    }
+
+    .hero h1{
+      font-size:52px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:0 auto;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    .small-cars-section{
+      max-width:1200px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:15px;
+      color:#111;
+    }
+
+    .section-text{
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 40px;
+      color:#555;
+      font-size:17px;
+      line-height:1.8;
+    }
+
+    .car-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:25px;
+    }
+
+    .car-card{
+      background:#fff;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .car-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .car-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .car-content{
+      padding:22px;
+    }
+
+    .car-content h3{
+      font-size:26px;
+      margin-bottom:12px;
+      color:#111;
+    }
+
+    .car-content p{
+      color:#555;
+      line-height:1.7;
+      margin-bottom:15px;
+      font-size:15px;
+    }
+
+    .features{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .features span{
+      background:#f1f1f1;
+      color:#333;
+      padding:8px 12px;
+      border-radius:20px;
+      font-size:13px;
+    }
+
+    .info-box{
+      background:#fff;
+      padding:30px;
+      border-radius:14px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      margin-top:45px;
+    }
+
+    .info-box h2{
+      font-size:30px;
+      margin-bottom:15px;
+      color:#111;
+    }
+
+    .info-box p{
+      color:#555;
+      line-height:1.9;
+      font-size:16px;
+      margin-bottom:12px;
+    }
+
+    .btn-area{
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:orangered;
+      color:#fff;
+      text-decoration:none;
+      padding:12px 28px;
+      border-radius:8px;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#d63d00;
+    }
+
+    footer{
+      background:#000;
+      color:#aaa;
+      text-align:center;
+      padding:25px 10px;
+      margin-top:50px;
+      font-size:15px;
+    }
+
+    @media (max-width: 992px){
+      .car-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+    }
+
+    @media (max-width: 768px){
+      .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      nav ul{
+        flex-direction:column;
+        gap:12px;
+      }
+
+      .hero{
+        padding:70px 15px;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .car-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-title{
+        font-size:30px;
+      }
+
+      .car-content h3{
+        font-size:24px;
+      }
+
+      .info-box{
+        padding:22px;
+      }
+
+      .info-box h2{
+        font-size:24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">CARVAN</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="range.html" class="active">Range of Cars</a></li>
+          <li><a href="preowned.html">PreOwned Cars</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Small Cars</h1>
+    <p>
+      Discover affordable, compact and fuel-efficient small cars that are perfect for
+      city driving, daily use, students and small families.
+    </p>
+  </section>
+
+  <section class="small-cars-section">
+    <h2 class="section-title">Popular Small Cars</h2>
+    <p class="section-text">
+      Small cars are practical, easy to maintain, and ideal for everyday driving.
+      They offer better mileage, easier parking and smart design for modern users.
+    </p>
+
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80" alt="Suzuki Alto">
+        <div class="car-content">
+          <h3>Suzuki Alto</h3>
+          <p>
+            A compact and economical car widely preferred for daily city travel.
+            It is budget-friendly and easy to drive.
+          </p>
+          <div class="features">
+            <span>Fuel Efficient</span>
+            <span>Budget Friendly</span>
+            <span>Compact Size</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80" alt="Suzuki Cultus">
+        <div class="car-content">
+          <h3>Suzuki Cultus</h3>
+          <p>
+            Stylish and comfortable hatchback with practical interior space,
+            smooth drive and reliable performance.
+          </p>
+          <div class="features">
+            <span>Modern Design</span>
+            <span>Comfortable</span>
+            <span>Good Mileage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&w=900&q=80" alt="KIA Picanto">
+        <div class="car-content">
+          <h3>KIA Picanto</h3>
+          <p>
+            A modern small car with attractive looks, better features and a premium
+            feel for urban drivers.
+          </p>
+          <div class="features">
+            <span>Stylish Look</span>
+            <span>Compact</span>
+            <span>City Drive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80" alt="Toyota Vitz">
+        <div class="car-content">
+          <h3>Toyota Vitz</h3>
+          <p>
+            Known for comfort and reliability, Toyota Vitz is a smart option for
+            users looking for quality in a compact form.
+          </p>
+          <div class="features">
+            <span>Reliable</span>
+            <span>Comfortable</span>
+            <span>Easy Handling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80" alt="Suzuki Wagon R">
+        <div class="car-content">
+          <h3>Suzuki Wagon R</h3>
+          <p>
+            A practical and spacious small car with better headroom and comfort,
+            suitable for daily routine and family use.
+          </p>
+          <div class="features">
+            <span>Spacious</span>
+            <span>Family Use</span>
+            <span>Practical</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=80" alt="Hyundai Santro">
+        <div class="car-content">
+          <h3>Hyundai Santro</h3>
+          <p>
+            A smart hatchback with smooth performance, compact body and comfortable
+            seating for short and medium trips.
+          </p>
+          <div class="features">
+            <span>Smart Interior</span>
+            <span>Compact Body</span>
+            <span>Smooth Drive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h2>Why Choose Small Cars?</h2>
+      <p>
+        Small cars are one of the best choices for people who want affordability,
+        easy maintenance and fuel efficiency. They are ideal for crowded city roads
+        and are easier to park as compared to larger vehicles.
+      </p>
+      <p>
+        At CARVAN, we help customers compare different small car options by giving
+        model details, category information and an easy browsing experience.
+      </p>
+
+      <div class="btn-area">
+        <a href="range.html" class="btn">Back to Range of Cars</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 CARVAN. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARVAN - Verified Sedans</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background:#f9f9f9; padding:20px; }
+    header { background:#111; color:#fff; padding:15px; text-align:center; border-radius:8px; margin-bottom:30px; }
+    .logo { color:#ff3c00; font-size:26px; font-weight:bold; text-decoration:none; }
+    
+    .car-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+    .car-card { background:#fff; border-radius:12px; overflow:hidden; border:1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    
+    /* Image styling with a grey background while loading */
+    .car-img { 
+      width:100%; 
+      height:200px; 
+      object-fit:cover; 
+      display:block;
+      background-color: #eeeeee;
+    }
+    
+    .car-info { padding:20px; }
+    h2 { font-size:20px; margin-bottom:10px; color:#111; }
+    .price { color:#ff3c00; font-weight:bold; font-size:18px; display:block; margin-top:10px; }
+    .specs { font-size:14px; color:#666; margin-top:5px; }
+    .back-btn { display:inline-block; margin-top:30px; text-decoration:none; color:#ff3c00; font-weight:bold; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">CARVAN</a>
+  </header>
+
+  <div class="car-grid">
+    <div class="car-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/2017_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282018-09-17%29_01.jpg/640px-2017_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282018-09-17%29_01.jpg" alt="Toyota Corolla Grande" class="car-img">
+      <div class="car-info">
+        <h2>Toyota Corolla Grande</h2>
+        <p class="specs">1.8L Dual VVT-i | Automatic CVT</p>
+        <span class="price">PKR 7,750,000</span>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/2022_Honda_Civic_Sedan_VTi-LX_%28front_view%29.jpg/640px-2022_Honda_Civic_Sedan_VTi-LX_%28front_view%29.jpg" alt="Honda Civic RS" class="car-img">
+      <div class="car-info">
+        <h2>Honda Civic RS</h2>
+        <p class="specs">1.5L VTEC Turbo | Sporty Interior</p>
+        <span class="price">PKR 9,800,000</span>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2021_Hyundai_Elantra_SEL%2C_Front_Left%2C_07-07-2021.jpg/640px-2021_Hyundai_Elantra_SEL%2C_Front_Left%2C_07-07-2021.jpg" alt="Hyundai Elantra" class="car-img">
+      <div class="car-info">
+        <h2>Hyundai Elantra GLS</h2>
+        <p class="specs">2.0L MPi | Modern Design</p>
+        <span class="price">PKR 7,130,000</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="index.html" class="back-btn">← Back to Home Page</a>
+  </div>
+
+</body>
+</html>
