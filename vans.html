@@ -5,12 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CARVAN - Vans & Family Carriers</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: #f9f9f9; color: #333; line-height: 1.6; }
+    /* --- INDEX PAGE HEADER MATCH --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f4f4f4; color: #222; line-height: 1.6; }
     
-    header { background: #111; color: #fff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 28px; font-weight: bold; color: #ff3c00; text-decoration: none; }
-    
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo a {
+      text-decoration: none; 
+      color: #ff3c00;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #ff3c00;
+      border-radius: 5px;
+    }
+
+    /* --- VANS PAGE CONTENT STYLES --- */
     .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
     .page-header { text-align: center; margin-bottom: 50px; }
     .page-header h1 { font-size: 36px; color: #111; margin-bottom: 10px; }
@@ -36,13 +80,29 @@
     .back-link { display: inline-block; margin-top: 40px; text-decoration: none; color: #555; font-weight: bold; transition: 0.3s; }
     .back-link:hover { color: #ff3c00; }
 
-    @media (max-width: 768px) { .car-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { 
+      header { flex-direction: column; gap: 15px; text-align: center; }
+      nav ul { justify-content: center; }
+      .car-grid { grid-template-columns: 1fr; } 
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">CARVAN</a>
+    <div class="logo">
+      <a href="index.html">CARVAN</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="range.html">Range of Cars</a></li>
+        <li><a href="preowned.html">PreOwned Cars</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="container">
@@ -53,7 +113,7 @@
 
     <div class="car-grid">
       <div class="car-card">
-        <img src="https://images.unsplash.com/photo-1565105525523-281b67f3398c?auto=format&fit=crop&w=800&q=80" alt="Toyota Hiace" class="car-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUtsPBiJIRNOQqdpLFzW7OZdLwIDPUxPaltA&s" alt="Toyota Hiace" class="car-img">
         <div class="car-details">
           <h2>Toyota Hiace Deluxe</h2>
           <table class="spec-table">
@@ -79,9 +139,21 @@
       </div>
 
       <div class="car-card">
-        <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&w=800&q=80" alt="Suzuki APV" class="car-img">
+        <img src="data:image/jpeg;base64,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8F+trdgv8TzKqvfo9krKZzXtzQl7SwWHsyBpvbuLPtKyMQje9pa02v1Wio91zJ5OJO5zvFBVGwtVIc9PFHnfMMoIFywOsHOB+bp1PdbWy9JbPUkzY28Q5bAAN7ABYBZGCbPU9I0Nhja3vtqtqgIiICIiAiIgIiICIiAiIgIiIC6p6djxZzQfv8j0XauLygrbbfCMTppDUYe9k8J1fTSgZmHqYnXBc0/RLrjpe9hEaXeqYzlq6CeJw5lmv2X5SPUq3sXw6SYWzWCiNTu3jec0hJQYmG7waCbQVBaT0eyRvxIy/FSBk0UrbgxvB+qQsGj2Ogg92JvjZbJkIboBZBrKrZehlN30dOSevDYD6gXWZhOEwUrDHBE2NriXEN6kgC58gPRZGVfde1B0wYbCyV0zYo2yvFnyBoD3DTQu5nkPQLMjfYrqzHuWt2jxGSmppZ44hK6JubJmLbgEZjex5C58kRqN71blw5zb2M0kUY8ncQ/CMqGbKYiJgIBARwGNPFLWOa0kAm19QTmOgUW2o27nxExtkbGyON2ZrWA8yLXc4nWwJ7Oa3mD175IWRMkjjcCGvzOEZfGDcZHOs29tDc3sNOehUnqWFjXPAYwAAvPIlgZmtlPuWuRYi/NY+5qmsypncLZ3tYP1QXu/iN9FrdsqqFjHcN2aWoy8ZzSDG1rWhojYRo9xtq/XTQL5sliknDZBE02Fye9zjcn/AD0AQWzxh2rvp4XSGzRf7lj7P4G8gOlNu5S6CEMFgLIMOjwtrdXe0fgFsERAREQEREBERAREQEREBERAREQEREBERAQhEQdMlOCsOooFskQR2WiIWM6MjopS5gPRdbqVh+aEEYXCRwA15KTnD4/oD4rrfhULucYPmf5oPNG3GxkcMjpKV4yuN+EebL9GO6jsB9So/h5qGmzI3k8uX4r1TNslRP1dTMPjm/mudPsvRxm7KaMeRQURs5u/q6xwfNdre9XPsvsdDRtAa0E9SVJY4mtFgAB3Lmg+NbZfURAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB//Z" alt="Suzuki APV" class="car-img">
         <div class="car-details">
           <h2>Suzuki APV GLX</h2>
           <table class="spec-table">
             <tr><td class="spec-label">Capacity</td><td class="spec-value">8 Seater</td></tr>
-            <tr><td class="spec-label">Engine</td><td class="spec-value">1
+            <tr><td class="spec-label">Engine</td><td class="spec-value">1.5L Petrol</td></tr>
+            <tr><td class="spec-label">Usage</td><td class="spec-value">Family Van</td></tr>
+          </table>
+          <span class="price-tag">PKR 6,290,000/-</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">← Return to Home Page</a>
+  </div>
+
+</body>
+</html>

@@ -5,30 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CARVAN - Range of Cars</title>
   <style>
+    /* Reset & Base Styles */
     *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-    body{background:#f4f4f4;color:#222;}
-    header,footer{background:#111;color:#fff;padding:15px 30px;}
-    header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+    body{background:#f9f9f9;color:#222;}
+
+    /* Header Styles */
+    header {
+      background:#111;
+      color:#fff;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
     .logo{font-size:28px;font-weight:bold;color:#ff3c00;}
-    nav ul{list-style:none;display:flex;gap:20px;flex-wrap:wrap;}
-    nav a{text-decoration:none;color:#fff;padding:8px 12px;}
+    nav ul{list-style:none;display:flex;gap:20px;}
+    nav a{text-decoration:none;color:#fff;padding:8px 12px; transition: 0.3s;}
     nav a:hover{background:#ff3c00;border-radius:5px;}
-    .container{max-width:1100px;margin:auto;padding:40px 20px;}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
-    .card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    h1,h2{margin-bottom:12px;}
-    p{line-height:1.7;color:#555;}
-    footer{text-align:center;margin-top:30px;}
-    @media(max-width:768px){header{flex-direction:column;gap:15px;}}
+
+    /* Container */
+    .container{max-width:1200px;margin:auto;padding:40px 20px;}
+    h1 {text-align: center; margin-bottom: 10px; font-size: 32px;}
+    .sub-text {text-align: center; color: #666; margin-bottom: 40px;}
+
+    /* Professional Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    /* Professional Card Look based on your image */
+    .car-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-top: 5px solid #ff3c00; /* Top Orange Border from image */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none; /* Card ko clickable banane ke liye */
+      color: inherit;
+      display: block;
+    }
+
+    .car-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-header-img {
+      width: 100%;
+      height: 180px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-header-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    /* Details Table Format (Matching your image) */
+    .specs-table {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 14px;
+    }
+
+    .spec-label {
+      color: #777;
+      font-weight: 500;
+    }
+
+    .spec-value {
+      color: #ff3c00;
+      font-weight: bold;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    footer{background: #111; color: #fff; text-align:center; padding:25px; margin-top:50px;}
+    
+    @media(max-width:768px){
+      header{flex-direction:column; gap:10px;}
+      .cards-grid {grid-template-columns: 1fr;}
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">CARVAN</div>
+
+   <header>
+    <div class="logo">
+      <a href="index.html">CARVAN</a>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
         <li><a href="brands.html">Brands</a></li>
         <li><a href="range.html">Range of Cars</a></li>
         <li><a href="preowned.html">PreOwned Cars</a></li>
@@ -37,32 +139,78 @@
     </nav>
   </header>
 
+
   <div class="container">
     <h1>Range of Cars</h1>
-    <p style="margin-bottom:20px;">The document specifically asks for categories like Small Car, Sedan, Van and Jeeps. :contentReference[oaicite:4]{index=4}</p>
+    <p class="sub-text">Explore our categories including Small Cars, Sedans, Vans, and SUVs.</p>
+    
+    <div class="cards-grid">
+      
+      <a href="small-cars.html" class="car-card">
+        <div class="card-header-img">
+          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800" alt="Small Car">
+        </div>
+        <div class="card-body">
+          <h2>Small Cars</h2>
+          <div class="specs-table">
+            <div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Hatchback</span></div>
+            <div class="spec-row"><span class="spec-label">Fuel</span><span class="spec-value">Very Economical</span></div>
+            <div class="spec-row"><span class="spec-label">Usage</span><span class="spec-value">Daily City Drive</span></div>
+          </div>
+          <p class="card-desc">Compact and ideal for students and small families.</p>
+        </div>
+      </a>
 
-    <div class="cards">
-      <div class="card">
-        <h2>Small Cars</h2>
-        <p>Compact, economical and ideal for daily city use. Best for students and small families.</p>
-      </div>
-      <div class="card">
-        <h2>Sedan</h2>
-        <p>Elegant design, comfortable seating and smooth performance for personal and business use.</p>
-      </div>
-      <div class="card">
-        <h2>Van</h2>
-        <p>Spacious and practical vehicles designed for larger families and transport purposes.</p>
-      </div>
-      <div class="card">
-        <h2>Jeeps / SUVs</h2>
-        <p>Strong road presence, better ground clearance and ideal for long routes and rough roads.</p>
-      </div>
+      <a href="sedans.html" class="car-card">
+        <div class="card-header-img">
+          <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=800" alt="Sedan">
+        </div>
+        <div class="card-body">
+          <h2>Sedan</h2>
+          <div class="specs-table">
+            <div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Luxury/Family</span></div>
+            <div class="spec-row"><span class="spec-label">Design</span><span class="spec-value">Elegant</span></div>
+            <div class="spec-row"><span class="spec-label">Comfort</span><span class="spec-value">Premium</span></div>
+          </div>
+          <p class="card-desc">Comfortable performance for personal and business use.</p>
+        </div>
+      </a>
+
+      <a href="vans.html" class="car-card">
+        <div class="card-header-img">
+          <img src="https://car-images.bauersecure.com/wp-images/236851/082-renault-trafic.jpg" alt="Van">
+        </div>
+        <div class="card-body">
+          <h2>Van</h2>
+          <div class="specs-table">
+            <div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">MPV / Transport</span></div>
+            <div class="spec-row"><span class="spec-label">Capacity</span><span class="spec-value">Large Family</span></div>
+            <div class="spec-row"><span class="spec-label">Space</span><span class="spec-value">Spacious</span></div>
+          </div>
+          <p class="card-desc">Practical vehicles designed for larger families and transport.</p>
+        </div>
+      </a>
+
+      <a href="suvs.html" class="car-card">
+        <div class="card-header-img">
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800" alt="SUV">
+        </div>
+        <div class="card-body">
+          <h2>Jeeps / SUVs</h2>
+          <div class="specs-table">
+            <div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Off-Road / 4x4</span></div>
+            <div class="spec-row"><span class="spec-label">Ground Clearance</span><span class="spec-value">High</span></div>
+            <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Strong Presence</span></div>
+          </div>
+          <p class="card-desc">Ideal for long routes and rough roads with high clearance.</p>
+        </div>
+      </a>
+
     </div>
   </div>
+ <footer>
+    <p>&copy; 2026 CARVAN - Project By Mubeen&Khuzaifa</p>
+  </footer>>
 
-  <footer>
-    <p>&copy; 2026 CARVAN. All Rights Reserved.</p>
-  </footer>
 </body>
 </html>

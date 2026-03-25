@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About CARVAN</title>
+  <style>
+    /* 1. Reset and Base Styles (Exact same as your Index) */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#222;
+    }
+
+    /* 2. Header Styles (Exact same as your Index) */
+    header{
+      background:#111;
+      color:#fff;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .logo a {
+      text-decoration: none; 
+      color: #ff3c00;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      padding:8px 12px;
+      display:block;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover{
+      background:#ff3c00;
+      border-radius:5px;
+    }
+
+    /* Active link color for current page */
+    .active-link {
+      background: #ff3c00;
+      border-radius: 5px;
+    }
+
+    /* 3. Hero Section (Styled like Index) */
+    .hero{
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') 
+                  center/cover no-repeat;
+      color:white;
+      text-align:center;
+      padding:120px 20px;
+    }
+
+    .hero h1{
+      font-size:48px;
+      margin-bottom:10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* 4. About Content Styling */
+    .about-section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: -50px auto 40px; /* Hero ke thora upar overlap */
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .about-content {
+      padding: 20px;
+    }
+
+    .about-content h2 {
+      color: #ff3c00;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .about-content h3 {
+      margin: 25px 0 10px;
+      font-size: 20px;
+      color: #111;
+    }
+
+    .about-content p {
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .about-content ul {
+      margin-left: 20px;
+      color: #444;
+    }
+
+    .about-content li {
+      margin-bottom: 10px;
+    }
+
+    /* 5. Footer (Exact same as Index) */
+    footer{
+      background:#111;
+      color:#fff;
+      text-align:center;
+      padding:30px;
+      margin-top:40px;
+    }
+
+    /* Mobile View */
+    @media(max-width:768px){
+      header{
+        flex-direction:column;
+        gap:15px;
+        text-align: center;
+      }
+      nav ul{
+        justify-content:center;
+      }
+      .hero h1{
+        font-size:32px;
+      }
+      .about-section {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">CARVAN</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html" class="active-link">About Us</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="range.html">Range of Cars</a></li>
+        <li><a href="preowned.html">PreOwned Cars</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>About CARVAN</h1>
+    <p>Enriching minds and inspiring generations since 1946.</p>
+  </section>
+
+  <div class="about-section">
+    <div class="about-content">
+      <h2>Our Legacy</h2>
+      <p>Founded in 1946 by <b>Chaudhry Abdul Hameed</b>, CARVAN has grown into one of the nation's leading car marketplaces. For over seven decades, we have remained committed to providing quality vehicles and detailed car information to buyers, families, and auto enthusiasts alike.</p>
+
+      <h3>Our Mission</h3>
+      <p>To empower car buyers by providing accessible, authentic, and comprehensive car details that help them make informed choices.</p>
+
+      <h3>Our Vision</h3>
+      <p>To be the most trusted and innovative car marketplace in Pakistan, recognized for excellence, transparency, and customer satisfaction.</p>
+
+      <h3>Why Choose CARVAN?</h3>
+      <ul>
+        <li><b>Legacy Since 1946:</b> A tradition of quality and trust in vehicle trading.</li>
+        <li><b>Quality Assurance:</b> Every vehicle undergoes detailed checks and verification.</li>
+        <li><b>Wide Reach:</b> Access to cars across Pakistan with reliable information.</li>
+        <li><b>Commitment:</b> We prioritize your needs at every step of your car buying journey.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 CARVAN - Project By Mubeen & Khuzaifa</p>
+  </footer>
+
+</body>
+</html>
