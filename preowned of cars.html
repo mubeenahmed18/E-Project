@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PreOwned Cars - CARVAN</title>
+
+<style>
+body{font-family:Arial; margin:0; background:#f4f4f4;}
+
+/* NAVBAR */
+.navbar{
+display:flex; justify-content:space-between; align-items:center;
+padding:15px 8%; background:#111;
+}
+.logo{color:#ff3c00; font-weight:bold;}
+.nav-links{display:flex; gap:20px; list-style:none;}
+.nav-links a{color:white; text-decoration:none; font-weight:500;}
+
+/* HEADER IMAGE */
+.header-img{
+position:relative;
+text-align:center;
+color:white;
+}
+.header-img img{
+width:100%;
+height:250px;
+object-fit:cover;
+opacity:0.85;
+}
+.header-img h1{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+font-size:40px;
+color:#ff3c00;
+font-weight:bold;
+}
+
+/* GRID */
+.cars{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition: transform 0.2s;
+}
+
+.card:hover{
+transform: translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.btn{
+background:#ff3c00;
+color:white;
+padding:10px;
+border:none;
+cursor:pointer;
+margin-top:10px;
+border-radius:5px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">CARVAN</div>
+<ul class="nav-links">
+<li><a href="about.html">About us</a></li>
+<li><a href="contact.html">Contact us</a></li>
+<li><a href="preowned.html">PreOwned Cars</a></li>
+</ul>
+</div>
+
+<!-- HEADER IMAGE WITH BLACK CAR -->
+<div class="header-img">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">" alt="PreOwned Cars Black Car">
+<h1>PreOwned Cars</h1>
+</div>
+
+<!-- CAR GRID -->
+<section class="cars">
+
+<!-- CAR 1 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
+<h3>Toyota Corolla</h3>
+<p>Price: 45 Lac</p>
+<p>Mileage: 50,000 km</p>
+<p>Model: 2020</p>
+<p>Fuel: Petrol</p>
+<a href="car1.html"><button class="btn">View Details</button></a>
+</div>
+
+<!-- CAR 2 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
+<h3>Honda Civic</h3>
+<p>Price: 55 Lac</p>
+<p>Mileage: 40,000 km</p>
+<p>Model: 2021</p>
+<p>Fuel: Petrol</p>
+<a href="car2.html"><button class="btn">View Details</button></a>
+</div>
+
+<!-- CAR 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e">
+<h3>BMW X5</h3>
+<p>Price: 1.2 Crore</p>
+<p>Mileage: 30,000 km</p>
+<p>Model: 2019</p>
+<p>Fuel: Diesel</p>
+<a href="car3.html"><button class="btn">View Details</button></a>
+</div>
+
+<!-- CAR 4 -->
+<div class="card">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEBMVFhUXFxcVGBgYGBgXGBUVFRcXFxUYFRUYICggGB0lGxUWITEiJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFQ8QFysdFR0tLS0rKystLS0rLS0tLS0tKzcrLS03LS0tLS0tLSstKy0tNy0tNzc3Ky0rKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABAIDBQYHAQj/xABLEAACAQIDBQUEBQcKBQQDAAABAgADEQQSIQUGMUFRE2FxgZEiMqGxBxQjQsEzUmJygrLRFRZDU5KTosLh8CRUc9LxY4PD4hc0RP/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAcEQEBAQADAQEBAAAAAAAAAAAAARECEiExUUH/2gAMAwEAAhEDEQA/AOqxEShERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREsY7GU6KGpWdUQcSxsP9T3QL8s4rF06YvUdUH6RA9Os5rvbv3iXUrs9ezH9Y4vUYfoIdE87nuE5/hcLj8U5e9Wow1LMS9vRbAyaO31N76F7Ug1T9XX4C5+EobepuWGqftMqfvTi21MNjaVPPiatanTuBcmsoueAABF/Sa9jaJIDCq7Etl9o5R33LNeNievoVt7yONGmvjXW/oqmRqu+p5CiP23b5KJwDZ+wqtexTswNdXq00uR+swPwmQXczFCxakXXjemyPfwsdZdh67Q++78ux9HP4iRX34r8jS/u2P8AnnEq1JUYoyOrDirIgYaX1UjpYyjOg6j9hPwjZ+Jl/XZqu/eKHA0f7t/++UJ9IWIA9s0vAUm+ZecfTEoLjM9+QC638mmZwdBnqLh0bX8pWdyStJVF2BNzYKNT1Jt0lmX+Hv669s7fcsmarYEmwsoUEd2ZiW8LSWd6m/MqedOoP/itOQYveIglMKWppwzjSrVtzdxqB0UWAvz4yAKjOC981vevqdeczVdwTepuaP8A2Kn40x85fp72pezAA97KD6E3+E4PhqhJCqCTewAFzrwAA4nX4TM0BjBoqYoDoEq2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" alt="">
+<h3>Audi Q7</h3>
+<p>Price: 1.1 Crore</p>
+<p>Mileage: 28,000 km</p>
+<p>Model: 2021</p>
+<p>Fuel: Diesel</p>
+<a href="car4.html"><button class="btn">View Details</button></a>
+</div>
+
+<!-- CAR 5 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+<h3>Mercedes C Class</h3>
+<p>Price: 1 Crore</p>
+<p>Mileage: 25,000 km</p>
+<p>Model: 2022</p>
+<p>Fuel: Petrol</p>
+<a href="car5.html"><button class="btn">View Details</button></a>
+</div>
+
+<!-- CAR 6 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
+<h3>Hyundai Elantra</h3>
+<p>Price: 60 Lac</p>
+<p>Mileage: 20,000 km</p>
+<p>Model: 2023</p>
+<p>Fuel: Petrol</p>
+<a href="car6.html"><button class="btn">View Details</button></a>
+</div>
+
+</section>
+
+</body>
+</html>
